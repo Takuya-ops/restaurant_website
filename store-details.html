@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビストロソラ - Food Place</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">Food Place</div>
+            <div class="header-search">
+                <img src="Asset/Icon/search.svg" alt="検索" class="search-icon">
+                <input type="text" placeholder="ジャンル、エリア、レストラン名で検索" class="header-search-input">
+            </div>
+            <nav class="header-nav">
+                <button class="icon-btn" aria-label="お気に入り">
+                    <img src="Asset/Icon/favorite.svg" alt="お気に入り" class="icon">
+                </button>
+                <button class="icon-btn" aria-label="履歴">
+                    <img src="Asset/Icon/history.svg" alt="履歴" class="icon">
+                </button>
+                <a href="#" class="login-link">ログイン</a>
+                <a href="#" class="register-btn">会員登録</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Store Header Section -->
+    <section class="store-header">
+        <div class="store-header-container">
+            <div class="store-category">フレンチ</div>
+            <h1 class="store-name">ビストロソラ</h1>
+            <p class="store-description">季節の食材を使ったカジュアルフレンチを楽しめるビストロです</p>
+            <div class="store-info-bar">
+                <span class="store-info-item">
+                    <img src="Asset/Icon/location_on_orange.svg" alt="場所" class="info-icon">
+                    渋谷駅 徒歩5分
+                </span>
+                <span class="store-info-item">
+                    <img src="Asset/Icon/sunny.svg" alt="ランチ" class="info-icon">
+                    2,000円~4,000円
+                </span>
+                <span class="store-info-item">
+                    <img src="Asset/Icon/mode_night.svg" alt="ディナー" class="info-icon">
+                    5,000円~10,000円
+                </span>
+                <span class="store-info-item">定休日:無休</span>
+            </div>
+            <div class="store-rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-value">4.16</span>
+                <button class="icon-btn-small" aria-label="お気に入り">
+                    <img src="Asset/Icon/favorite.svg" alt="お気に入り" class="icon-small">
+                </button>
+                <button class="icon-btn-small" aria-label="共有">
+                    <img src="Asset/Icon/Logo_X.svg" alt="共有" class="icon-small">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-wrapper">
+                <div class="gallery-main">
+                    <img src="Asset/Store Details/Photo_01.png" alt="レストラン内装" id="main-image" class="gallery-main-image">
+                </div>
+                <div class="gallery-thumbnails">
+                    <div class="thumbnail active" data-image="Asset/Store Details/Photo_01.png">
+                        <img src="Asset/Store Details/Photo_01.png" alt="サムネイル1">
+                    </div>
+                    <div class="thumbnail" data-image="Asset/Store Details/Photo_02.png">
+                        <img src="Asset/Store Details/Photo_02.png" alt="サムネイル2">
+                    </div>
+                    <div class="thumbnail" data-image="Asset/Store Details/Photo_03.png">
+                        <img src="Asset/Store Details/Photo_03.png" alt="サムネイル3">
+                    </div>
+                    <div class="thumbnail" data-image="Asset/Store Details/Photo_04.png">
+                        <img src="Asset/Store Details/Photo_04.png" alt="サムネイル4">
+                    </div>
+                    <div class="thumbnail" data-image="Asset/Store Details/Photo_05.png">
+                        <img src="Asset/Store Details/Photo_05.png" alt="サムネイル5">
+                        <div class="view-all-overlay">
+                            <button class="view-all-btn">すべての写真を表示</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Navigation -->
+    <section class="tabs-section">
+        <div class="tabs-container">
+            <button class="tab active" data-tab="overview">概要</button>
+            <button class="tab" data-tab="menu">メニュー</button>
+            <button class="tab" data-tab="seating">座席</button>
+            <button class="tab" data-tab="photos">写真</button>
+            <button class="tab" data-tab="access">アクセス</button>
+            <button class="tab" data-tab="reviews">クチコミ</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content-wrapper">
+        <div class="main-content">
+            <!-- Overview Tab Content -->
+            <div class="tab-content active" id="overview">
+                <div class="content-section">
+                    <p class="description-text">
+                        旬の食材を使ったカジュアルフレンチを楽しめるビストロです。新鮮な食材と心を込めた料理で、大切な人との時間をより豊かに過ごしていただけます。
+                    </p>
+
+                    <!-- Courses Section -->
+                    <div class="courses-section">
+                        <h2 class="section-heading">コース</h2>
+                        
+                        <div class="course-item">
+                            <div class="course-image">
+                                <img src="Asset/Store Details/Course_01.png" alt="レギュラーコース">
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-name">レギュラーコース</h3>
+                                <p class="course-description">このコースでは、季節の新鮮な食材を使った特製の前菜、ジューシーなメインディッシュ、そして手作りのデザートをお楽しみいただけます。</p>
+                                <div class="course-footer">
+                                    <span class="course-price">4,500円(税込)</span>
+                                    <button class="reserve-btn">予約</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-image">
+                                <img src="Asset/Store Details/Course_02.png" alt="カジュアルディナーコース">
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-name">カジュアルディナーコース</h3>
+                                <p class="course-description">当日予約可能!! 旬の食材を使用したお皿と、尾崎牛を使用した贅沢なコースになっております。</p>
+                                <div class="course-footer">
+                                    <span class="course-price">7,500円(税込)</span>
+                                    <button class="reserve-btn">予約</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-item">
+                            <div class="course-image">
+                                <img src="Asset/Store Details/Course_03.png" alt="プレミアムコース">
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-name">プレミアムコース (7品+デザート)</h3>
+                                <p class="course-description">その時期ならではの旬の味わいをお楽しみいただけます。洗練された雰囲気の中で、心地よい時間をお過ごしください。</p>
+                                <div class="course-footer">
+                                    <span class="course-price">12,000円(税込)</span>
+                                    <button class="reserve-btn">予約</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="view-all-link">すべてのコースを見る &gt;</a>
+                    </div>
+
+                    <!-- Seating Section -->
+                    <div class="seating-section">
+                        <h2 class="section-heading">座席</h2>
+                        
+                        <div class="seating-item">
+                            <div class="seating-image">
+                                <img src="Asset/Store Details/Seat_01.png" alt="テーブル席">
+                            </div>
+                            <div class="seating-content">
+                                <h3 class="seating-name">テーブル席</h3>
+                                <span class="seating-info">禁煙</span>
+                                <button class="reserve-btn">予約</button>
+                            </div>
+                        </div>
+
+                        <div class="seating-item">
+                            <div class="seating-image">
+                                <img src="Asset/Store Details/Seat_02.png" alt="個室">
+                            </div>
+                            <div class="seating-content">
+                                <h3 class="seating-name">個室</h3>
+                                <span class="seating-info">禁煙</span>
+                                <button class="reserve-btn">予約</button>
+                            </div>
+                        </div>
+
+                        <div class="seating-item">
+                            <div class="seating-image">
+                                <img src="Asset/Store Details/Seat_03.png" alt="カウンター">
+                            </div>
+                            <div class="seating-content">
+                                <h3 class="seating-name">カウンター</h3>
+                                <span class="seating-info">禁煙</span>
+                                <button class="reserve-btn">予約</button>
+                            </div>
+                        </div>
+
+                        <a href="#" class="view-all-link">すべての座席を見る &gt;</a>
+                    </div>
+
+                    <!-- Reviews Section -->
+                    <div class="reviews-section">
+                        <h2 class="section-heading">クチコミ</h2>
+                        <div class="reviews-grid">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-avatar">TT</div>
+                                    <div class="review-info">
+                                        <div class="review-name">田中 太郎</div>
+                                        <div class="review-rating">
+                                            <span class="stars-small">★★★★★</span>
+                                            <span class="review-time">1日前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">とても良いお店でした。料理も美味しく、サービスも素晴らしかったです。</p>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-avatar">SK</div>
+                                    <div class="review-info">
+                                        <div class="review-name">佐藤 健士</div>
+                                        <div class="review-rating">
+                                            <span class="stars-small">★★★★★</span>
+                                            <span class="review-time">3日前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">雰囲気が良く、デートに最適です。また来たいと思います。</p>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-avatar">YM</div>
+                                    <div class="review-info">
+                                        <div class="review-name">山田 美咲</div>
+                                        <div class="review-rating">
+                                            <span class="stars-small">★★★★★</span>
+                                            <span class="review-time">5日前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">コース料理が素晴らしく、ワインの選定もおすすめです。</p>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="review-avatar">ST</div>
+                                    <div class="review-info">
+                                        <div class="review-name">鈴木 太郎</div>
+                                        <div class="review-rating">
+                                            <span class="stars-small">★★★★★</span>
+                                            <span class="review-time">1週間前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="review-text">値段以上の価値があると思います。また利用します。</p>
+                            </div>
+                        </div>
+                        <a href="#" class="view-all-link">すべてのクチコミを見る &gt;</a>
+                    </div>
+
+                    <!-- Store Information Section -->
+                    <div class="store-info-section">
+                        <h2 class="section-heading">店舗情報</h2>
+                        <div class="info-grid">
+                            <div class="info-group">
+                                <h3 class="info-group-title">基本情報</h3>
+                                <dl class="info-list">
+                                    <dt>店名</dt>
+                                    <dd>ビストロソラ</dd>
+                                    <dt>ジャンル</dt>
+                                    <dd>フレンチ</dd>
+                                    <dt>予約可否</dt>
+                                    <dd>予約可</dd>
+                                    <dt>住所</dt>
+                                    <dd>東京都渋谷区XX 1-XX-XX</dd>
+                                    <dt>営業時間</dt>
+                                    <dd>
+                                        月・火・木・金: 11:30-14:00, 17:30-22:30<br>
+                                        土・日・祝日: 17:30-22:30
+                                    </dd>
+                                    <dt>定休日</dt>
+                                    <dd>水</dd>
+                                    <dt>支払い方法</dt>
+                                    <dd>
+                                        カード可 (VISA, Master, JCB, AMEX, Diners)<br>
+                                        電子マネー可<br>
+                                        QRコード決済可 (PayPay)
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="info-group">
+                                <h3 class="info-group-title">席・設備</h3>
+                                <dl class="info-list">
+                                    <dt>席数</dt>
+                                    <dd>34席 (カウンター8席、テーブル28席)</dd>
+                                    <dt>個室</dt>
+                                    <dd>有</dd>
+                                    <dt>禁煙・喫煙</dt>
+                                    <dd>全席禁煙 (入り口付近に喫煙スペース有)</dd>
+                                    <dt>駐車場</dt>
+                                    <dd>近隣に多数パーキングあり!</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Tab Contents (initially hidden) -->
+            <div class="tab-content" id="menu">
+                <div class="content-section">
+                    <p>メニューコンテンツ</p>
+                </div>
+            </div>
+            <div class="tab-content" id="seating">
+                <div class="content-section">
+                    <p>座席コンテンツ</p>
+                </div>
+            </div>
+            <div class="tab-content" id="photos">
+                <div class="content-section">
+                    <p>写真コンテンツ</p>
+                </div>
+            </div>
+            <div class="tab-content" id="access">
+                <div class="content-section">
+                    <p>アクセスコンテンツ</p>
+                </div>
+            </div>
+            <div class="tab-content" id="reviews">
+                <div class="content-section">
+                    <p>クチコミコンテンツ</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reservation Widget -->
+        <aside class="reservation-widget">
+            <div class="widget-content">
+                <div class="phone-info">
+                    <img src="Asset/Icon/phone.svg" alt="電話" class="phone-icon">
+                    <div class="phone-number">050-000-000</div>
+                </div>
+                <p class="availability-text">本日夜空席あり</p>
+                <p class="reservation-note">※予約・お問合わせの際は「XXX」を見たと<br>お伝えいただくとスムーズです。</p>
+                
+                <div class="form-group">
+                    <label class="form-label">人数</label>
+                    <div class="select-wrapper">
+                        <img src="Asset/Icon/people.svg" alt="人数" class="select-icon">
+                        <select class="form-select">
+                            <option>2名</option>
+                            <option>3名</option>
+                            <option>4名</option>
+                            <option>5名</option>
+                        </select>
+                        <img src="Asset/Icon/arrow_drop_down.svg" alt="" class="dropdown-icon">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">予約日</label>
+                    <div class="calendar-widget">
+                        <div class="calendar-header">
+                            <button class="calendar-nav" id="prev-month">‹</button>
+                            <span class="calendar-month">2026年 2月</span>
+                            <button class="calendar-nav" id="next-month">›</button>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="calendar-weekdays">
+                                <div>日</div>
+                                <div>月</div>
+                                <div>火</div>
+                                <div>水</div>
+                                <div>木</div>
+                                <div>金</div>
+                                <div>土</div>
+                            </div>
+                            <div class="calendar-days" id="calendar-days">
+                                <!-- Calendar days will be generated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">開始時間</label>
+                    <div class="select-wrapper">
+                        <img src="Asset/Icon/time.svg" alt="時間" class="select-icon">
+                        <select class="form-select">
+                            <option>18:00</option>
+                            <option>19:00</option>
+                            <option>20:00</option>
+                            <option>21:00</option>
+                        </select>
+                        <img src="Asset/Icon/arrow_drop_down.svg" alt="" class="dropdown-icon">
+                    </div>
+                </div>
+
+                <button class="reservation-submit-btn">予約へ進む</button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">Food Place</div>
+            <div class="footer-copyright">© 2023 XXX Inc. All rights reserved.</div>
+            <nav class="footer-nav">
+                <a href="#">サイトマップ</a>
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">利用規約</a>
+                <a href="#">よくある問い合わせ</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

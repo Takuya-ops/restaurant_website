@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Place - レストラン検索・予約サイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">Food Place</div>
+            <nav class="header-nav">
+                <button class="icon-btn" aria-label="お気に入り">
+                    <img src="Asset/Icon/favorite.svg" alt="お気に入り" class="icon">
+                </button>
+                <button class="icon-btn" aria-label="履歴">
+                    <img src="Asset/Icon/history.svg" alt="履歴" class="icon">
+                </button>
+                <a href="#" class="login-link">ログイン</a>
+                <a href="#" class="register-btn">会員登録</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="hero-banner">
+        <div class="banner-image">
+            <img src="Asset/Top/Slider_01.png" alt="レストラン内装">
+        </div>
+        <div class="banner-content">
+            <h1 class="banner-title">シェフがおすすめする<br>5000円で楽しめるフレンチ特集</h1>
+            <p class="banner-description">Web予約でポイントが5倍もらえて、イチオシのレストランをご紹介</p>
+            <button class="banner-btn">詳しく見る</button>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-field">
+                <img src="Asset/Icon/location_on.svg" alt="エリア" class="field-icon">
+                <input type="text" placeholder="例) 渋谷" class="search-input">
+            </div>
+            <div class="search-field">
+                <img src="Asset/Icon/search.svg" alt="キーワード" class="field-icon">
+                <input type="text" placeholder="例) 焼肉、店名、個室" class="search-input">
+            </div>
+            <div class="search-field">
+                <img src="Asset/Icon/time.svg" alt="時間" class="field-icon">
+                <select class="search-select">
+                    <option>18:00</option>
+                    <option>19:00</option>
+                    <option>20:00</option>
+                </select>
+                <img src="Asset/Icon/arrow_drop_down.svg" alt="" class="dropdown-icon">
+            </div>
+            <div class="search-field">
+                <img src="Asset/Icon/calendar.svg" alt="予約日" class="field-icon">
+                <select class="search-select">
+                    <option>11/19 (水)</option>
+                    <option>11/20 (木)</option>
+                    <option>11/21 (金)</option>
+                </select>
+                <img src="Asset/Icon/arrow_drop_down.svg" alt="" class="dropdown-icon">
+            </div>
+            <div class="search-field">
+                <img src="Asset/Icon/people.svg" alt="人数" class="field-icon">
+                <select class="search-select">
+                    <option>2名</option>
+                    <option>3名</option>
+                    <option>4名</option>
+                </select>
+                <img src="Asset/Icon/arrow_drop_down.svg" alt="" class="dropdown-icon">
+            </div>
+            <button class="search-btn">検索</button>
+        </div>
+    </section>
+
+    <!-- Nearby Restaurants Section -->
+    <section class="restaurants-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">近くのレストラン</h2>
+                <a href="#" class="view-all-link">すべて見る &gt;</a>
+            </div>
+            <div class="restaurant-grid">
+                <!-- Restaurant Card 1 -->
+                <div class="restaurant-card">
+                    <div class="card-image-wrapper">
+                        <img src="Asset/Store Details/Photo_01.png" alt="ビストロソラ" class="card-image">
+                        <button class="favorite-btn" aria-label="お気に入りに追加">
+                            <img src="Asset/Icon/favorite.svg" alt="お気に入り" class="favorite-icon">
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="restaurant-name">ビストロソラ</h3>
+                        <p class="restaurant-description">季節の食材を使ったカジュアルフレンチを楽しめるビストロです</p>
+                        <div class="restaurant-info">
+                            <span class="info-item">渋谷駅 徒歩5分</span>
+                        </div>
+                        <div class="price-info">
+                            <span class="price-item">
+                                <img src="Asset/Icon/sunny.svg" alt="ランチ" class="price-icon">
+                                2,000円~4,000円
+                            </span>
+                            <span class="price-item">
+                                <img src="Asset/Icon/mode_night.svg" alt="ディナー" class="price-icon">
+                                5,000円~10,000円
+                            </span>
+                        </div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-value">4.16</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 2 -->
+                <div class="restaurant-card">
+                    <div class="card-image-wrapper">
+                        <img src="Asset/Store Details/Photo_02.png" alt="スパイス・ジャーニー" class="card-image">
+                        <button class="favorite-btn" aria-label="お気に入りに追加">
+                            <img src="Asset/Icon/favorite.svg" alt="お気に入り" class="favorite-icon">
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="restaurant-name">スパイス・ジャーニー</h3>
+                        <p class="restaurant-description">数十種類のスパイスを調合した、奥深いカレーとタンドール料理が楽しめます</p>
+                        <div class="restaurant-info">
+                            <span class="info-item">渋谷駅 徒歩7分</span>
+                        </div>
+                        <div class="price-info">
+                            <span class="price-item">
+                                <img src="Asset/Icon/sunny.svg" alt="ランチ" class="price-icon">
+                                1,000円~2,000円
+                            </span>
+                            <span class="price-item">
+                                <img src="Asset/Icon/mode_night.svg" alt="ディナー" class="price-icon">
+                                3,000円~5,000円
+                            </span>
+                        </div>
+                        <div class="rating">
+                            <span class="stars">★★★☆☆</span>
+                            <span class="rating-value">3.28</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 3 -->
+                <div class="restaurant-card">
+                    <div class="card-image-wrapper">
+                        <img src="Asset/Store Details/Photo_03.png" alt="寿司処 潮路" class="card-image">
+                        <button class="favorite-btn" aria-label="お気に入りに追加">
+                            <img src="Asset/Icon/favorite.svg" alt="お気に入り" class="favorite-icon">
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="restaurant-name">寿司処 潮路</h3>
+                        <p class="restaurant-description">毎朝市場から仕入れる新鮮なネタと、熟練の職人技が光る江戸前寿司です</p>
+                        <div class="restaurant-info">
+                            <span class="info-item">渋谷駅 徒歩10分</span>
+                        </div>
+                        <div class="price-info">
+                            <span class="price-item">
+                                <img src="Asset/Icon/sunny.svg" alt="ランチ" class="price-icon">
+                                3,000円~5,000円
+                            </span>
+                            <span class="price-item">
+                                <img src="Asset/Icon/mode_night.svg" alt="ディナー" class="price-icon">
+                                5,000円~10,000円
+                            </span>
+                        </div>
+                        <div class="rating">
+                            <span class="stars">★★★☆☆</span>
+                            <span class="rating-value">3.07</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 4 -->
+                <div class="restaurant-card">
+                    <div class="card-image-wrapper">
+                        <img src="Asset/Store Details/Photo_04.png" alt="炭火焼肉 牛炎" class="card-image">
+                        <button class="favorite-btn" aria-label="お気に入りに追加">
+                            <img src="Asset/Icon/favorite.svg" alt="お気に入り" class="favorite-icon">
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="restaurant-name">炭火焼肉 牛炎</h3>
+                        <p class="restaurant-description">A5ランク黒毛和牛の希少部位まで楽しめる、活気あふれる焼肉店です</p>
+                        <div class="restaurant-info">
+                            <span class="info-item">渋谷駅 徒歩8分</span>
+                        </div>
+                        <div class="price-info">
+                            <span class="price-item">
+                                <img src="Asset/Icon/sunny.svg" alt="ランチ" class="price-icon">
+                                5,000円~6,000円
+                            </span>
+                            <span class="price-item">
+                                <img src="Asset/Icon/mode_night.svg" alt="ディナー" class="price-icon">
+                                8,000円~15,000円
+                            </span>
+                        </div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-value">4.20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot Button -->
+    <div class="chatbot-widget">
+        <div class="chatbot-icon">
+            <img src="Asset/Icon/chat.svg" alt="AIチャット">
+        </div>
+        <div class="chatbot-text">
+            <div class="chatbot-title">AI飲食店検索</div>
+            <div class="chatbot-subtitle">どんなお店をお探しですか?</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
