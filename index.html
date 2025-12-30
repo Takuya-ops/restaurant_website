@@ -26,24 +26,49 @@
 
     <!-- Main Banner -->
     <section class="hero-banner">
-        <div class="banner-image">
-            <img src="Asset/Top/Slider_01.png" alt="レストラン内装">
+        <div class="banner-slider">
+            <div class="banner-slide active">
+                <img src="Asset/Top/Slider_01.png" alt="レストラン内装">
+            </div>
+            <div class="banner-slide">
+                <img src="Asset/Top/Slider_02.png" alt="レストラン内装">
+            </div>
+            <div class="banner-slide">
+                <img src="Asset/Top/Slider_03.png" alt="レストラン内装">
+            </div>
         </div>
         <div class="banner-content">
-            <h1 class="banner-title">シェフがおすすめする<br>5000円で楽しめるフレンチ特集</h1>
-            <p class="banner-description">Web予約でポイントが5倍もらえて、イチオシのレストランをご紹介</p>
-            <button class="banner-btn">詳しく見る</button>
+            <div class="banner-text-content active" data-slide="0">
+                <h1 class="banner-title">シェフがおすすめする<br>5000円で楽しめるフレンチ特集</h1>
+                <p class="banner-description">Web予約でポイントが5倍もらえて、イチオシのレストランをご紹介</p>
+                <button class="banner-btn">詳しく見る</button>
+            </div>
+            <div class="banner-text-content" data-slide="1">
+                <h1 class="banner-title">女子会レストラン<br>デザート付きのランチコース特集</h1>
+                <p class="banner-description">オシャレで雰囲気が良い、女子会におすすめのレストランをご紹介</p>
+                <button class="banner-btn">詳しく見る</button>
+            </div>
+            <div class="banner-text-content" data-slide="2">
+                <h1 class="banner-title">今月の一皿<br>旬な食材を楽しめる特集</h1>
+                <p class="banner-description">東京都にあるおすすめレストランをご紹介</p>
+                <button class="banner-btn">詳しく見る</button>
+            </div>
+        </div>
+        <div class="banner-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
         </div>
     </section>
 
     <!-- Search Section -->
     <section class="search-section">
         <div class="search-container">
-            <div class="search-field">
+            <div class="search-field search-field-large">
                 <img src="Asset/Icon/location_on.svg" alt="エリア" class="field-icon">
                 <input type="text" placeholder="例) 渋谷" class="search-input">
             </div>
-            <div class="search-field">
+            <div class="search-field search-field-large">
                 <img src="Asset/Icon/search.svg" alt="キーワード" class="field-icon">
                 <input type="text" placeholder="例) 焼肉、店名、個室" class="search-input">
             </div>

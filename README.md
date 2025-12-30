@@ -77,3 +77,4 @@ Interフォントを使用しています。以下のフォントウェイトが
 
 モダンブラウザ（Chrome、Firefox、Safari、Edge）に対応しています。
 
+

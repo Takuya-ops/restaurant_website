@@ -226,6 +226,63 @@ function initRestaurantCards() {
     });
 }
 
+// Banner Slider
+function initBannerSlider() {
+    const slides = document.querySelectorAll('.banner-slide');
+    const textContents = document.querySelectorAll('.banner-text-content');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5秒ごとに切り替え
+
+    function showSlide(index) {
+        // Remove active class from all slides, text contents and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        textContents.forEach(content => content.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Add active class to current slide, text content and indicator
+        if (slides[index]) {
+            slides[index].classList.add('active');
+        }
+        if (textContents[index]) {
+            textContents[index].classList.add('active');
+        }
+        if (indicators[index]) {
+            indicators[index].classList.add('active');
+        }
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Auto slide
+    let slideTimer = setInterval(nextSlide, slideInterval);
+
+    // Indicator click handlers
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+            // Reset timer when manually switching
+            clearInterval(slideTimer);
+            slideTimer = setInterval(nextSlide, slideInterval);
+        });
+    });
+
+    // Pause on hover (optional)
+    const heroBanner = document.querySelector('.hero-banner');
+    if (heroBanner) {
+        heroBanner.addEventListener('mouseenter', () => {
+            clearInterval(slideTimer);
+        });
+        heroBanner.addEventListener('mouseleave', () => {
+            slideTimer = setInterval(nextSlide, slideInterval);
+        });
+    }
+}
+
 // Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initTabs();
@@ -236,5 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCalendar();
     initChatbot();
     initRestaurantCards();
+    initBannerSlider();
 });
+
 

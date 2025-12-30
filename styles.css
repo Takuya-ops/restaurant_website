@@ -55,7 +55,7 @@ body {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ body {
 .logo {
     font-size: 24px;
     font-weight: 700;
-    color: #8B4513;
+    color: #BC4C00;
 }
 
 .header-search {
@@ -82,6 +82,8 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 8px;
+    flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(1%) hue-rotate(337deg) brightness(96%) contrast(88%);
 }
 
 .header-search-input {
@@ -135,13 +137,14 @@ body {
 }
 
 .register-btn {
-    background-color: #4A90E2;
-    color: #fff;
+    background-color: transparent;
+    color: #464240;
     padding: 8px 16px;
     border-radius: 4px;
+    border: 1px solid #969290;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 /* Hero Banner */
@@ -152,30 +155,84 @@ body {
     overflow: hidden;
 }
 
-.banner-image {
+.banner-slider {
     width: 100%;
     height: 100%;
+    position: relative;
+}
+
+.banner-slide {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.banner-image img {
+.banner-slide.active {
+    opacity: 1;
+}
+
+.banner-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.banner-indicators {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
 .banner-content {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 24px;
     height: 100%;
+    z-index: 1;
+}
+
+.banner-text-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 64px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+
+.banner-text-content.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .banner-title {
@@ -195,14 +252,17 @@ body {
 
 .banner-btn {
     background-color: #fff;
-    color: #333;
-    border: 2px solid #333;
+    color: #464240;
+    border: 1px solid #969290;
     padding: 12px 32px;
     border-radius: 4px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     align-self: flex-start;
+    margin-top: 24px;
+    z-index: 2;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 
 /* Search Section */
@@ -215,7 +275,7 @@ body {
 .search-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 64px;
     display: flex;
     gap: 16px;
     align-items: center;
@@ -233,11 +293,17 @@ body {
     min-width: 150px;
 }
 
+.search-field-large {
+    flex: 2;
+    min-width: 200px;
+}
+
 .field-icon {
     width: 20px;
     height: 20px;
     margin-right: 8px;
     flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(1%) hue-rotate(337deg) brightness(96%) contrast(88%);
 }
 
 .search-input {
@@ -264,10 +330,11 @@ body {
     position: absolute;
     right: 12px;
     pointer-events: none;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(1%) hue-rotate(337deg) brightness(96%) contrast(88%);
 }
 
 .search-btn {
-    background-color: #FF6B35;
+    background-color: #E16F24;
     color: #fff;
     border: none;
     padding: 12px 48px;
@@ -286,7 +353,7 @@ body {
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 64px;
 }
 
 .section-header {
@@ -363,6 +430,11 @@ body {
 .favorite-icon {
     width: 20px;
     height: 20px;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(1%) hue-rotate(337deg) brightness(96%) contrast(88%);
+}
+
+.favorite-btn.active .favorite-icon {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(98%) saturate(7482%) hue-rotate(347deg) brightness(96%) contrast(101%);
 }
 
 .card-content {
@@ -409,6 +481,7 @@ body {
 .price-icon {
     width: 16px;
     height: 16px;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(1%) hue-rotate(337deg) brightness(96%) contrast(88%);
 }
 
 .rating {
@@ -433,34 +506,38 @@ body {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
-    border-radius: 12px;
-    padding: 16px 20px;
+    background: linear-gradient(136deg, #8250DF 0%, #096CDC 100%);
+    border-radius: 62px;
+    padding: 12px 24px 12px 12px;
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
     cursor: pointer;
     z-index: 999;
     transition: transform 0.2s;
 }
 
 .chatbot-widget:hover {
-    transform: scale(1.05);
+    background: linear-gradient(136deg, #612DC1 0%, #0455B1 100%);
 }
 
 .chatbot-icon {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #fff;
+    border-radius: 1000px;
+    border: 2px solid #fff;
+    flex-shrink: 0;
 }
 
 .chatbot-icon img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) saturate(100%) invert(48%) sepia(93%) saturate(2831%) hue-rotate(245deg) brightness(93%) contrast(96%);
 }
 
 .chatbot-text {
@@ -468,14 +545,17 @@ body {
 }
 
 .chatbot-title {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
 }
 
 .chatbot-subtitle {
-    font-size: 12px;
-    opacity: 0.9;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.556;
+    letter-spacing: 0.05em;
 }
 
 /* Store Details Page */
@@ -488,7 +568,7 @@ body {
 .store-header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 120px;
 }
 
 .store-category {
@@ -545,7 +625,7 @@ body {
 .gallery-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 120px;
 }
 
 .gallery-wrapper {
@@ -630,7 +710,7 @@ body {
 .tabs-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 120px;
     display: flex;
     gap: 32px;
 }
@@ -652,19 +732,19 @@ body {
 }
 
 .tab.active {
-    color: #FF6B35;
-    border-bottom-color: #FF6B35;
-    font-weight: 600;
+    color: #000;
+    border-bottom-color: #E16F24;
+    font-weight: 700;
 }
 
 /* Main Content */
 .main-content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 32px 24px;
+    padding: 40px 120px 120px;
     display: grid;
     grid-template-columns: 1fr 400px;
-    gap: 32px;
+    gap: 40px;
 }
 
 .main-content {
@@ -759,7 +839,7 @@ body {
 }
 
 .reserve-btn {
-    background-color: #8B4513;
+    background-color: #BC4C00;
     color: #fff;
     border: none;
     padding: 10px 24px;
@@ -771,7 +851,7 @@ body {
 }
 
 .reserve-btn:hover {
-    background-color: #6B3410;
+    background-color: #953800;
 }
 
 /* Seating */
@@ -1005,6 +1085,7 @@ body {
     height: 20px;
     margin-right: 8px;
     flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(1%) hue-rotate(337deg) brightness(96%) contrast(88%);
 }
 
 .form-select {
@@ -1087,16 +1168,16 @@ body {
 }
 
 .calendar-day.selected {
-    background-color: #FF6B35;
+    background-color: #E16F24;
     color: #fff;
 }
 
 .calendar-day.available {
-    border: 1px solid #FF6B35;
+    border: 1px solid #E16F24;
 }
 
 .reservation-submit-btn {
-    background-color: #8B4513;
+    background-color: #BC4C00;
     color: #fff;
     border: none;
     padding: 16px;
@@ -1109,7 +1190,7 @@ body {
 }
 
 .reservation-submit-btn:hover {
-    background-color: #6B3410;
+    background-color: #953800;
 }
 
 /* Footer */
@@ -1123,7 +1204,7 @@ body {
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1134,7 +1215,7 @@ body {
 .footer-logo {
     font-size: 20px;
     font-weight: 700;
-    color: #8B4513;
+    color: #BC4C00;
 }
 
 .footer-copyright {
@@ -1176,6 +1257,7 @@ body {
 @media (max-width: 768px) {
     .header-container {
         flex-wrap: wrap;
+        padding: 0 24px;
     }
 
     .header-search {
@@ -1186,14 +1268,34 @@ body {
 
     .search-container {
         flex-direction: column;
+        padding: 0 24px;
     }
 
     .search-field {
         width: 100%;
     }
 
+    .section-container {
+        padding: 0 24px;
+    }
+
     .restaurant-grid {
         grid-template-columns: 1fr;
+    }
+
+    .banner-text-content {
+        padding: 0 24px;
+    }
+
+    .store-header-container,
+    .gallery-container,
+    .tabs-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .main-content-wrapper {
+        padding: 32px 24px;
     }
 
     .gallery-wrapper {
@@ -1227,6 +1329,10 @@ body {
 
     .banner-title {
         font-size: 24px;
+    }
+
+    .footer-container {
+        padding: 0 24px;
     }
 }
 
